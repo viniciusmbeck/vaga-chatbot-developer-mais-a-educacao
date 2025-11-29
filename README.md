@@ -1,8 +1,8 @@
-# 🤖 Desafio para vaga de Chatbot Developer - Chatbot de qualificação de leads e inficação de cursos
+# 🤖 Desafio para vaga de Chatbot Developer - Chatbot de qualificação de leads e indicação de cursos
 
 ## 🖥 Plataforma usada e por que escolheu
 O chatbot foi construído com a plataforma **BLiP**.  
-A escolha se deu por ser uma das plataformas mencionadas na descrição da vaga, além do domínio técnico da mesma. Soma-se a isso a faclidade de realizar a validação de regras de negócios e chamadas Http.
+A escolha se deu por ser uma das plataformas mencionadas na descrição da vaga, além do domínio técnico da mesma. Soma-se a isso a failidade  de realizar a validação de regras de negócios e chamadas HTTP  .
 
 ---
 
@@ -12,7 +12,7 @@ Para realizar o teste do chatbot é necessário acessar o webchat [clicando aqui
 ---
 
 ## Configurações internas
-A nível de desenvolvimento tomei a decisão de salvar alguns valores nas configurações básicas do chatbot, para que ficassem centralizadas para eventuais ajustes.
+No desenvolvimento tomei a decisão de salvar alguns valores nas configurações básicas do chatbot, para que ficassem centralizadas para eventuais ajustes.
 
 As chaves estão descritas abaixo:
 | Nome da Configuração   | Descrição                                                              | Valor Atual                                              |
@@ -229,12 +229,12 @@ Além das APIs fornecidas foram criados dois endpoints na plataforma **Beeceptor
 ---
 
 ## Alteração de descontos
-Os descontos são setado inicialmente como **false** no início do fluxo e são re-atribuidos para "*true** conforme seleção do usuário durante o fluxo. Toda vez que o usuário informa que, foi indicado, vai manter o pagamento recorrente ou já atua na área, as variáveis são alteradas.
+Os descontos são setado inicialmente como **false** no início do fluxo e são reatribuídos para "*true** conforme seleção do usuário durante o fluxo. Toda vez que o usuário informa que, foi indicado, vai manter o pagamento recorrente ou já atua na área, as variáveis são alteradas.
 
 ### Desconto de urgência
-O desconto de urgência foi implementado considerando que cada curso possui uma data de fechamento, sendo assim foi necessário alterar o json de cursos inicialmente oferido para adicionar o campo **enrollmentClosingDate**.
+O desconto de urgência foi implementado considerando que cada curso possui uma data de fechamento, sendo assim foi necessário alterar o json de cursos inicialmente fornecido para adicionar o campo **enrollmentClosingDate**.
 
-Com essa informação, selecionar o curso é feito o calculo de diferença entre o dia de hoje (momento de execução do fluxo) para a data de fechamento representada pelo campo citado.
+Com essa informação, selecionar o curso é feito o cálculo de diferença entre o dia de hoje (momento de execução do fluxo) para a data de fechamento representada pelo campo citado.
 
 ---
 
@@ -242,10 +242,10 @@ Com essa informação, selecionar o curso é feito o calculo de diferença entre
 Além de tudo que foi solicitado houve a implementação de duas features adicionais sendo elas:
 
 1) **O controle de erros de input do usuário**:
-    - O usuário poderá fornecer um input inesperado, isso é, um input que não esteja dentro do menu exibido, uma vez. Logo que esse input é reconhecido uma nova tentiva é dada, entretanto, caso ousuário erre mais uma vez a seleção, o tratamento de input faz com que o usuário seja direcionado ao atenidmento humano. Essa feature tem como objetivo auxiliar pessoas que possam ter dificuldades à informar opções ou dados sem que isso exija um grande trabalho.
+    - O usuário poderá fornecer um input inesperado, isso é, um input que não esteja dentro do menu exibido, uma vez. Logo que esse input é reconhecido uma nova tentativa é dada, entretanto, caso o usuário erre mais uma vez a seleção, o tratamento de input faz com que o usuário seja direcionado ao atendimento humano. Essa feature tem como objetivo auxiliar pessoas que possam ter dificuldades à informar opções ou dados sem que isso exija um grande trabalho.
 
 2) **Flag para utilização de telefone pré-definido**:
-    - Também foi desenvolvida uma feature flag (já mencionada nas configurações) que possiblita utilizar ou não o telefone de contato já existente. Caso a flag esteja ativa, o fluxo apresenta o telefone já registrado e quesitona o usuário se pode seguir com ele, caso negativo, o usuário recebe uma nova pergunta para inserir seu telefone.
+    - Também foi desenvolvida uma feature flag (já mencionada nas configurações) que possibilita utilizar ou não o telefone de contato já existente. Caso a flag esteja ativa, o fluxo apresenta o telefone já registrado e questiona o usuário se pode seguir com ele, caso negativo, o usuário recebe uma nova pergunta para inserir seu telefone.
 
 ---
 
